@@ -49,7 +49,7 @@ app.post("/api/friends", function (request, response) {
 
       console.log(currentFriend.name);
 
-      // We then loop through all the scores of each friend
+      // Then loop through all the scores of each friend
       for (var j = 0; j < currentFriend.scores.length; j++) {
         var currentFriendScore = currentFriend.scores[j];
         var currentUserScore = userScores[j];
@@ -66,6 +66,8 @@ app.post("/api/friends", function (request, response) {
         bestMatch.friendDifference = totalDifference;
       }
     }
+
+    //lNOTES
 
     // Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
     // the database will always return that the user is the user's best friend).
